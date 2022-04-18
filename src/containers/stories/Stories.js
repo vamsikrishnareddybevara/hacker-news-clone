@@ -14,6 +14,8 @@ export const Stories = ({ category }) => {
   };
   useEffect(() => {
     setLoading(true);
+    setCount(STORY_INCREMENT);
+    setStoryIds([]);
     getStoryIds(category).then((data) => {
       setLoading(false);
       setStoryIds(data);
